@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThirdApp.Pages.RelativeBoxesPage"  Title="Try Relative Layout">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <RelativeLayout>
+                <Label Text="box1 : Relative To Parent" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
+                   FontAttributes="Bold" FontSize="19"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent , Property=Width,Factor=0.1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent , Property=Height,Factor=0.1}"
+                     WidthRequest="200" HeightRequest="150" BackgroundColor="DarkSalmon" x:Name="box1"/>
+
+                <Label Text="Relative To View (box1)" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
+                   FontAttributes="Bold" FontSize="19"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView ,ElementName=box1, Property=Width,Factor=.8}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView ,ElementName=box1, Property=Height,Factor=1.2}"
+                     WidthRequest="180" HeightRequest="130" BackgroundColor="DarkCyan"/>
+
+            </RelativeLayout>
+            <Button Text="Next Task" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="1,1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Gold" FontSize="17"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThirdApp.Pages.OrientationLayoutsPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Spacing="20" VerticalOptions="FillAndExpand" Padding="20"
+                                      AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+
+             >
+                <Label Text="Horizontal StackLayout" FontSize="Large" HorizontalOptions="Center"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                    <BoxView BackgroundColor="DarkRed" HorizontalOptions="FillAndExpand"/>
+                    <BoxView BackgroundColor="Black" HorizontalOptions="FillAndExpand"/>
+                    <BoxView BackgroundColor="DarkRed" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <Label Text="Vertical StackLayout" FontSize="Large" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <BoxView BackgroundColor="DarkRed" HorizontalOptions="FillAndExpand"/>
+                    <BoxView BackgroundColor="Black" HorizontalOptions="FillAndExpand"/>
+                    <BoxView BackgroundColor="DarkRed" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="First Task" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="1,1,1,60" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Gold" FontSize="17"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages1="clr-namespace:ThirdApp.Pages"
+             x:Class="ThirdApp.Pages.NewsPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Padding="20">
+                <Label Text="Latest News"
+                HorizontalOptions="CenterAndExpand" Margin="10"/>
+                <pages1:LatestNews VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <Button Text="Next Task" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="1,1,1,60" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Gold" FontSize="17"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

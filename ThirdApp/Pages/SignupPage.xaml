@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThirdApp.Pages.SignupPage" Title="Sign Up">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Image x:Name="bgImg" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+            <StackLayout Spacing="10" VerticalOptions="Center" 
+                         AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Image x:Name="registerImg" HorizontalOptions="Center" HeightRequest="180" Aspect="AspectFit"/>
+                <Entry x:Name="user_email" Keyboard="Email" Placeholder="Email..." PlaceholderColor="White" TextColor="White"/>
+                <Entry x:Name="user_phone" Keyboard="Telephone" Placeholder="Telephone..." PlaceholderColor="White" TextColor="White"/>
+                <Button  Text="Sign Up" Margin="0,50" BackgroundColor="LightCoral" FontSize="19" Clicked="Button_Clicked"/>
+            </StackLayout>
+            <Button Text="Next Task" Clicked="nextbtn_Clicked" AbsoluteLayout.LayoutBounds="1,1,1,60" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Gold" FontSize="17"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

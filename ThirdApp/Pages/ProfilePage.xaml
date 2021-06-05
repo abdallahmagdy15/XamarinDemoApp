@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThirdApp.Pages.ProfilePage" >
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <RelativeLayout>
+                <Image Source="https://t4.ftcdn.net/jpg/02/86/02/67/360_F_286026740_xWkobcEk5g38qrH7cpfeImAnlUUSIrc5.jpg" x:Name="coverimg" HorizontalOptions="FillAndExpand" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}" HeightRequest="150" BackgroundColor="DarkBlue"/>
+                <Image Source="Meee.jpg" HeightRequest="80" WidthRequest="80" 
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=coverimg, Property=Width, Factor=0.5, Constant=-40}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=coverimg, Property=Height, Factor=1, Constant=-40}"/>
+                <StackLayout 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=coverimg,Property=Height,Factor=1}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+                Spacing="10" Margin="0,40,0,0" Padding="10">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Abdullah Magdy" FontSize="22" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Button BackgroundColor="CornflowerBlue" TextColor="White" WidthRequest="100" Text="Follow"/>
+                    </StackLayout>
+                    <Label Text="I'm either codeing or drawing right now..." VerticalOptions="FillAndExpand" FontSize="19" Margin="0,10,0,0" />
+                </StackLayout>
+            </RelativeLayout>
+            <Button Text="Next Task" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="1,1,1,60" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Gold" FontSize="17"/>
+        </AbsoluteLayout>
+        </ContentPage.Content>
+</ContentPage>
